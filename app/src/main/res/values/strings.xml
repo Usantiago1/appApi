@@ -1,9 +1,17 @@
 <resources>
-    <string name="app_name">Inicio de Sesión</string>
+    <string name="app_name">App</string>
+    <string name="add_user">Crear Cuenta</string>
     <string name="btn_login">Iniciar Sesión</string>
     <string name="btn_add">Crear Cuenta</string>
     <string name="txt_User">Usuario</string>
     <string name="txt_Password">Contraseña</string>
+    <string name="txt_nombre">Nombre</string>
+    <string name="txt_ap">Apellido Paterno</string>
+    <string name="txt_am">Apellido Materno</string>
+    <string name="txt_correo">Correo</string>
+    <string name="txt_nac">Fecha Nacimiento</string>
+    <string name="btn_save">Guardar Registro</string>
+
 
 
 </resources>
