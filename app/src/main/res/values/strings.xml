@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Inicio de Sesión</string>
+    <string name="btn_login">Iniciar Sesión</string>
+    <string name="btn_add">Crear Cuenta</string>
+    <string name="txt_User">Usuario</string>
+    <string name="txt_Password">Contraseña</string>
+
+
+</resources>
