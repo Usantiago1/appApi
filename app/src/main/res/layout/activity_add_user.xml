@@ -2,13 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/txt_correo"
+    android:id="@+id/txtCorreo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".addUser">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout6"
+        android:id="@+id/textInputLayout61"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="340dp"
         android:layout_height="48dp"
@@ -146,10 +146,11 @@
         tools:ignore="MissingConstraints">
 
         <EditText
-            android:id="@+id/txt_correo"
+            android:id="@+id/txt_email"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:autofillHints="no"
+            android:hint="em@il"
             android:inputType="textEmailAddress"
             tools:layout_editor_absoluteX="100dp"
             tools:layout_editor_absoluteY="115dp" />
@@ -181,7 +182,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout6"
+        android:id="@+id/txt_pass"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="340dp"
         android:layout_height="48dp"
@@ -192,15 +193,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline9"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints" >
 
         <EditText
-            android:id="@+id/txt_pass"
+            android:id="@+id/txt_contra"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="Contraseña"
+            android:hint="Contraseña "
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 

@@ -21,7 +21,7 @@
         tools:ignore="MissingConstraints">
 
         <EditText
-            android:id="@+id/txt_correo"
+            android:id="@+id/txt_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints="no"
@@ -54,6 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:hint="Contraseña"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 

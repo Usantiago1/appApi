@@ -16,8 +16,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import java.util.HashMap;
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        txt_correo = findViewById(R.id.txt_correo);
+        txt_correo = findViewById(R.id.txt_email);
         txt_contrasenia = findViewById(R.id.txt_contrasenia);
 
         btnLogin = findViewById(R.id.btn_login);
@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 alienLogin(txt_correo.getText().toString(), txt_contrasenia.getText().toString());
+
+
             }
         });
 
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent vistaRegistro = new Intent(MainActivity.this, addUser.class);
                 startActivity(vistaRegistro);
+                finish();
             }
         });
 
@@ -60,7 +63,11 @@ public class MainActivity extends AppCompatActivity {
         StringRequest loginRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                JSONTokener jsonObject = new JSONTokener(response);
+                try {
+                    JSONArray jsonObject = new JSONArray(response);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
                 String res = response.toString();
                 Toast.makeText(MainActivity.this, "Mensaje = "+ res, Toast.LENGTH_LONG).show();
 

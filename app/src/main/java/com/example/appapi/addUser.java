@@ -15,6 +15,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -35,8 +36,8 @@ public class addUser extends AppCompatActivity {
         txtnombre = findViewById(R.id. txt_nombre);
         txtap = findViewById(R.id.txt_pa);
         txtam = findViewById(R.id.txt_ma);
-        txtcorreo = findViewById(R.id.txt_correo);
-        txtcontrasenia = findViewById(R.id.txt_contrasenia);
+        txtcorreo = findViewById(R.id.txt_email);
+        txtcontrasenia = findViewById(R.id.txt_contra);
         txtnac = findViewById(R.id.txt_nac);
         txtstatus = findViewById(R.id.txt_status);
 
@@ -52,12 +53,12 @@ public class addUser extends AppCompatActivity {
 
     private void alien_add(final String usuario, final String nombre, final String ap, final String am, final String correo, final String contrasenia, final String nac, final String status){
         String url = "https://api-alien.herokuapp.com/aliens";
-        StringRequest postRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+        StringRequest postRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
-                    Toast.makeText(addUser.this, "Mensaje" + jsonObject.getString("Registro"), Toast.LENGTH_LONG).show();
+                    Toast.makeText(addUser.this, "Datos Guardados ="+ jsonObject.getString("Registro"), Toast.LENGTH_LONG).show();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
