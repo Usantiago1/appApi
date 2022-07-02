@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                validateAdd();
                 alienLogin(txt_correo.getText().toString(), txt_contrasenia.getText().toString());
             }
         });
@@ -53,6 +54,28 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public boolean validateAdd(){
+        boolean retorno = true;
+
+
+        String email = txt_correo.getText().toString();
+        String password = txt_contrasenia.getText().toString();
+
+
+        if (email.isEmpty() && password.isEmpty()){
+            String message = "Este campo es requerido";
+
+            txt_correo.setError(message);
+            txt_contrasenia.setError(message);
+
+            retorno = false;
+        }
+
+
+
+        return retorno;
     }
 
     private void alienLogin (final String correo, final String contrasenia){

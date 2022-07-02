@@ -37,7 +37,7 @@ public class addUser extends AppCompatActivity {
         txtap = findViewById(R.id.txt_pa);
         txtam = findViewById(R.id.txt_ma);
         txtcorreo = findViewById(R.id.txt_email);
-        txtcontrasenia = findViewById(R.id.txt_contra);
+        txtcontrasenia = findViewById(R.id.txt_contrasenia);
         txtnac = findViewById(R.id.txt_nac);
         txtstatus = findViewById(R.id.txt_status);
 
@@ -56,13 +56,13 @@ public class addUser extends AppCompatActivity {
         boolean retorno = true;
 
         String user = txtusuario.getText().toString();
-        String name = txtusuario.getText().toString();
-        String ap = txtusuario.getText().toString();
-        String am = txtusuario.getText().toString();
-        String email = txtusuario.getText().toString();
-        String password = txtusuario.getText().toString();
-        String nac = txtusuario.getText().toString();
-        String status = txtusuario.getText().toString();
+        String name = txtnombre.getText().toString();
+        String ap = txtap.getText().toString();
+        String am = txtap.getText().toString();
+        String email = txtcorreo.getText().toString();
+        String password = txtcontrasenia.getText().toString();
+        String nac = txtnac.getText().toString();
+        String status = txtstatus.getText().toString();
 
         if (user.isEmpty() && name.isEmpty() && ap.isEmpty() && am.isEmpty() && email.isEmpty() && password.isEmpty() && nac.isEmpty() && status.isEmpty()){
             String message = "Este campo es requerido";
