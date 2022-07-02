@@ -2,15 +2,40 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/txt_correo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".addUser">
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout6"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="#2196F3"
+        app:hintTextColor="#2196F3"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/txt_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autofillHints="no"
+            android:hint="Estatus"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="340dp"
-        android:layout_height="60dp"
+        android:layout_height="48dp"
         app:boxBackgroundMode="outline"
         app:boxStrokeColor="#2196F3"
         app:hintTextColor="#2196F3"
@@ -21,8 +46,9 @@
         tools:ignore="MissingConstraints">
 
         <EditText
+            android:id="@+id/txt_usuario"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="41dp"
             android:autofillHints="no"
             android:hint="@string/txt_User"
             android:inputType="text"
@@ -34,7 +60,7 @@
         android:id="@+id/textInputLayout1"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="340dp"
-        android:layout_height="60dp"
+        android:layout_height="48dp"
         app:boxBackgroundMode="outline"
         app:boxStrokeColor="#2196F3"
         app:hintTextColor="#2196F3"
@@ -45,6 +71,7 @@
         tools:ignore="MissingConstraints">
 
         <EditText
+            android:id="@+id/txt_nombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints="no"
@@ -58,7 +85,7 @@
         android:id="@+id/textInputLayout2"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="340dp"
-        android:layout_height="60dp"
+        android:layout_height="48dp"
         app:boxBackgroundMode="outline"
         app:boxStrokeColor="#2196F3"
         app:hintTextColor="#2196F3"
@@ -69,6 +96,7 @@
         tools:ignore="MissingConstraints">
 
         <EditText
+            android:id="@+id/txt_pa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints="no"
@@ -82,7 +110,7 @@
         android:id="@+id/textInputLayout3"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="340dp"
-        android:layout_height="60dp"
+        android:layout_height="48dp"
         app:boxBackgroundMode="outline"
         app:boxStrokeColor="#2196F3"
         app:hintTextColor="#2196F3"
@@ -93,6 +121,7 @@
         tools:ignore="MissingConstraints">
 
         <EditText
+            android:id="@+id/txt_ma"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints="no"
@@ -106,7 +135,7 @@
         android:id="@+id/textInputLayout4"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="340dp"
-        android:layout_height="60dp"
+        android:layout_height="48dp"
         app:boxBackgroundMode="outline"
         app:boxStrokeColor="#2196F3"
         app:hintTextColor="#2196F3"
@@ -117,10 +146,10 @@
         tools:ignore="MissingConstraints">
 
         <EditText
+            android:id="@+id/txt_correo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints="no"
-            android:hint="@string/txt_correo"
             android:inputType="textEmailAddress"
             tools:layout_editor_absoluteX="100dp"
             tools:layout_editor_absoluteY="115dp" />
@@ -130,7 +159,7 @@
         android:id="@+id/textInputLayout5"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="340dp"
-        android:layout_height="60dp"
+        android:layout_height="48dp"
         app:boxBackgroundMode="outline"
         app:boxStrokeColor="#2196F3"
         app:hintTextColor="#2196F3"
@@ -141,6 +170,7 @@
         tools:ignore="MissingConstraints">
 
         <EditText
+            android:id="@+id/txt_nac"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints="no"
@@ -154,7 +184,7 @@
         android:id="@+id/textInputLayout6"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="340dp"
-        android:layout_height="60dp"
+        android:layout_height="48dp"
         app:boxBackgroundMode="outline"
         app:boxStrokeColor="#2196F3"
         app:hintTextColor="#2196F3"
@@ -165,13 +195,13 @@
         tools:ignore="MissingConstraints">
 
         <EditText
+            android:id="@+id/txt_pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints="no"
-            android:hint="@string/txt_Password"
-            android:inputType="textPassword"
-            tools:layout_editor_absoluteX="100dp"
-            tools:layout_editor_absoluteY="115dp" />
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Contraseña"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.constraintlayout.widget.Guideline
@@ -179,56 +209,56 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="355dp" />
+        app:layout_constraintGuide_begin="317dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="433dp" />
+        app:layout_constraintGuide_begin="381dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="510dp" />
+        app:layout_constraintGuide_begin="444dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="651dp" />
+        app:layout_constraintGuide_begin="595dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="584dp" />
+        app:layout_constraintGuide_begin="501dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="160dp" />
+        app:layout_constraintGuide_begin="131dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="219dp" />
+        app:layout_constraintGuide_begin="190dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="285dp" />
+        app:layout_constraintGuide_begin="253dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline16"
@@ -242,10 +272,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="92dp" />
+        app:layout_constraintGuide_begin="69dp" />
 
     <Button
-        android:id="@+id/btnAdd"
+        android:id="@+id/btnRegistrar"
         style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -253,10 +283,12 @@
         android:textColor="#2196F3"
         android:textSize="14sp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        app:layout_constraintTop_toTopOf="@+id/guideline12"
+        app:layout_constraintVertical_bias="0.164"
         app:rippleColor="#3F51B5"
         app:strokeColor="#3F51B5" />
 
