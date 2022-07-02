@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.renderscript.ScriptGroup;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                validate();
                 alienLogin(txt_correo.getText().toString(), txt_contrasenia.getText().toString());
             }
         });
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent vistaRegistro = new Intent(MainActivity.this, addUser.class);
                 startActivity(vistaRegistro);
             }
@@ -55,11 +58,31 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public boolean validate(){
+        boolean retorno = true;
+
+        String password = txt_contrasenia.getText().toString();
+        String email = txt_correo.getText().toString();
+
+        if(email.isEmpty() && password.isEmpty()){
+            txt_contrasenia.setError("Este campo es requerido");
+            txt_correo.setError("Este campo es requerido");
+            retorno = false;
+        }
+
+
+
+        return retorno;
+    }
+
+
+
     private void alienLogin (final String correo, final String contrasenia){
         String url = "https://api-alien.herokuapp.com/login";
         StringRequest loginRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+
                 JSONTokener jsonObject = new JSONTokener(response);
                 String res = response.toString();
                 Toast.makeText(MainActivity.this, "Mensaje = "+ res, Toast.LENGTH_LONG).show();
@@ -81,9 +104,6 @@ public class MainActivity extends AppCompatActivity {
         };
         Volley.newRequestQueue(this).add(loginRequest);
     }
-
-
-
 
 
 }

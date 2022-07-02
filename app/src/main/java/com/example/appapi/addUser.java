@@ -44,10 +44,42 @@ public class addUser extends AppCompatActivity {
         registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                validateAdd();
                 alien_add(txtusuario.getText().toString(), txtnombre.getText().toString(), txtap.getText().toString(), txtam.getText().toString(), txtcorreo.getText().toString(), txtcontrasenia.getText().toString(), txtnac.getText().toString(), txtstatus.getText().toString());
 
             }
         });
+    }
+
+    public boolean validateAdd(){
+        boolean retorno = true;
+
+        String user = txtusuario.getText().toString();
+        String name = txtusuario.getText().toString();
+        String ap = txtusuario.getText().toString();
+        String am = txtusuario.getText().toString();
+        String email = txtusuario.getText().toString();
+        String password = txtusuario.getText().toString();
+        String nac = txtusuario.getText().toString();
+        String status = txtusuario.getText().toString();
+
+        if (user.isEmpty() && name.isEmpty() && ap.isEmpty() && am.isEmpty() && email.isEmpty() && password.isEmpty() && nac.isEmpty() && status.isEmpty()){
+            String message = "Este campo es requerido";
+            txtnombre.setError(message);
+            txtusuario.setError(message);
+            txtap.setError(message);
+            txtam.setError(message);
+            txtcorreo.setError(message);
+            txtstatus.setError(message);
+            txtnac.setError(message);
+            txtcontrasenia.setError(message);
+
+            retorno = false;
+        }
+
+
+
+        return retorno;
     }
 
     private void alien_add(final String usuario, final String nombre, final String ap, final String am, final String correo, final String contrasenia, final String nac, final String status){
